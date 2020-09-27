@@ -2,10 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>
+            {% block title %}
+                Witaj!
+            {% endblock %}
+        </title>
+
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <h2>Navigation bar</h2>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

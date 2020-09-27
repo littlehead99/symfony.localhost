@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Kierunek{% endblock %}
+
+{% block body %}
+    {{ form_start(form_kierunek,{'attr':{'id':'opis_kierunek_form'}}) }}
+    {{ form(form_kierunek)}}
+    {{ form_end(form_kierunek) }}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Przedmiot{% endblock %}
+
+{% block body %}
+    {{ form_start(form_przedmiot,{'attr':{'id':'opis_kierunek_form'}}) }}
+    {{ form(form_przedmiot)}}
+    {{ form_end(form_przedmiot) }}
+
+{% endblock %}

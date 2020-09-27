@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Student{% endblock %}
+
+{% block body %}
+   {{ form_start(form_student,{'attr':{'id':'opis_student_form'}}) }}
+      {{ form(form_student)}}
+   {{ form_end(form_student) }}
+
+{% endblock %}

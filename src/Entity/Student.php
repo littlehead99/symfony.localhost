@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\StudentRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -17,59 +19,124 @@ class Student
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
 
     /**
      * @ORM\Column(type="string", length=4)
      */
-    private $year_of_birth;
+    private $rok_urodzenia;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Przedmiot::class, inversedBy="Studenci")
+     */
+    private $przedmioty;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Kierunek::class, inversedBy="Studenci")
+     */
+    private $kierunek;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $subject;
+    private $imie;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nazwisko;
+
+
+    public function __construct()
+    {
+        $this->przedmioty = new ArrayCollection();
+        $this->przedmioty = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->imie.' '.$this->nazwisko.' '.$this->rok_urodzenia;
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getImie(): ?string
     {
-        return $this->name;
+        return $this->imie;
     }
 
-    public function setName(string $name): self
+    public function setImie(string $imie): self
     {
-        $this->name = $name;
+        $this->imie = $imie;
 
         return $this;
     }
 
-    public function getYearOfBirth(): ?string
+    public function getNazwisko(): ?string
     {
-        return $this->year_of_birth;
+        return $this->nazwisko;
     }
 
-    public function setYearOfBirth(string $year_of_birth): self
+    public function setNazwisko(string $nazwisko): self
     {
-        $this->year_of_birth = $year_of_birth;
+        $this->nazwisko = $nazwisko;
 
         return $this;
     }
 
-    public function getSubject(): ?string
+    public function getRokUrodzenia(): ?string
     {
-        return $this->subject;
+        return $this->rok_urodzenia;
     }
 
-    public function setSubject(string $subject): self
+    public function setRokUrodzenia(string $rok_urodzenia): self
     {
-        $this->subject = $subject;
+        $this->rok_urodzenia = $rok_urodzenia;
 
         return $this;
     }
+
+    /**
+     * @return Collection|Przedmiot[]
+     */
+    public function getPrzedmioty(): Collection
+    {
+        return $this->przedmioty;
+    }
+
+    public function addPrzedmioty(Przedmiot $przedmioty): self
+    {
+        if (!$this->przedmioty->contains($przedmioty)) {
+            $this->przedmioty[] = $przedmioty;
+        }
+
+        return $this;
+    }
+
+    public function removePrzedmioty(Przedmiot $przedmioty): self
+    {
+        if ($this->przedmioty->contains($przedmioty)) {
+            $this->przedmioty->removeElement($przedmioty);
+        }
+
+        return $this;
+    }
+
+    public function getKierunek(): ?Kierunek
+    {
+        return $this->kierunek;
+    }
+
+    public function setKierunek(?Kierunek $kierunek): self
+    {
+        $this->kierunek = $kierunek;
+
+        return $this;
+    }
+
+
+
+
 }

@@ -11,17 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c8e1695-f489-4c2e-ac24-663ee21559ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/student/form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/student/form_kierunek.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/student/form_przedmiot.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Student.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/student/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/student/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +163,8 @@
       <updated>1600938890429</updated>
       <workItem from="1600938891515" duration="873000" />
       <workItem from="1600939780133" duration="12367000" />
-      <workItem from="1601197593791" duration="20924000" />
+      <workItem from="1601197593791" duration="21674000" />
+      <workItem from="1601271369254" duration="553000" />
     </task>
     <servers />
   </component>
@@ -216,6 +208,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601205114355" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1601240155899">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601240155899" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601205088803">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

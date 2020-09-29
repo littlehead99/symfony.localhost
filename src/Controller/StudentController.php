@@ -115,7 +115,7 @@ class StudentController extends AbstractController
             );
         }
 
-        return new Response('Student '.$student->getNazwa().' jest zapisany w bazie z numerem id '.$student->getId());
+        return new Response('Student '.$student->getImie().' '.$student->getNazwisko().' jest zapisany w bazie z numerem id '.$student->getId());
     }
 
     /**
@@ -132,7 +132,8 @@ class StudentController extends AbstractController
             );
         }
 
-        $student->setNazwa('Basia Nowak');
+        $student->setImie('Basia');
+        $student->setNazwisko('Nowak');
         $entityManager->flush();
 
         return $this->redirectToRoute('pokaz_studenta', [
